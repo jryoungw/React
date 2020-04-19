@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { TextBox, SelectBox, TwoButton } from "./TextBox";
+import {
+  TextBox,
+  SelectBox,
+  TwoButton,
+  ButtonContainer,
+  Wrapper,
+} from "./TextBox";
 
 class App extends Component {
   render() {
@@ -42,8 +48,12 @@ class App extends Component {
             placeholder="- 없이 입력해주세요. 예) 01012341234"
           />
           <TextBox label="관심사" />
-          <TwoButton>초기화</TwoButton>
-          <TwoButton>가입하기</TwoButton>
+          <Wrapper>
+            <ButtonContainer>
+              <TwoButton>초기화</TwoButton>
+              <TwoButton>가입하기</TwoButton>
+            </ButtonContainer>
+          </Wrapper>
         </div>
       </div>
     );

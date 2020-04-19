@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import oc from "open-color";
 
 const Wrapper = styled.div`
@@ -16,6 +16,7 @@ const Label = styled.div`
 `;
 
 const Input = styled.input`
+  box-sizing: border-box;
   width: 500px;
   border: 1px solid ${oc.gray[4]};
   outline: none;
@@ -47,22 +48,24 @@ const Select = styled.select`
     padding: 0px 2px 1px;
   }
 `;
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
 
 const TwoButton = styled.button`
-  width: 250px;
+  width: 240px;
   border: none;
   line-height: 3rem;
   font-size: 1.1rem;
   color: white;
   background: green;
-  margin-top : 1rem;
-  margin-bottom:1rem;
-  margin-right: 1rem;
+  /* margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem; */
   &:hover {
     background-color: green;
     color: white;
-  }
-
   }
 `;
 
@@ -86,4 +89,4 @@ const SelectBox = ({ label, ...rest }) => (
 //   </Wrapper>
 // );
 
-export { TextBox, SelectBox, TwoButton };
+export { TextBox, SelectBox, TwoButton, ButtonContainer, Wrapper };
